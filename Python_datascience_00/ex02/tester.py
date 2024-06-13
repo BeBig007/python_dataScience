@@ -14,7 +14,6 @@ all_thing_is_obj("Toto")
 
 print(all_thing_is_obj(10))
 
-
 # $>python tester.py | cat -e
 # List : <class 'list'>$
 # Tuple : <class 'tuple'>$
