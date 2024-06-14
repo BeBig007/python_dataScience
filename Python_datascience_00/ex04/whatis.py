@@ -12,7 +12,7 @@ try:
     else:
         print("I'm Odd.")
 except AssertionError as msg:
-	print(f"AssertionError: {msg}")
+    print(f"AssertionError: {msg}")
 
 # $> python whatis.py 14
 # I'm Even.

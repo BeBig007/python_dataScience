@@ -1,15 +1,15 @@
 
 def ft_tqdm(lst: range) -> None:
-    """_summary_
+    """function to display a progress bar
 
     Args:
-        lst (range): _description_
+        lst (range): range of numbers
     """
     total = len(lst)
 
     for idx, item in enumerate(lst):
         progress = (idx + 1) / total
-        progress_percent = int(progress * 100)
-        progress_bar = f"{progress_percent}%|{'█' * progress_percent}{' ' * (100 - progress_percent)}| {idx + 1}/{total}"
-        print(f"\r{progress_bar}", end="")
+        prcnt = int(progress * 100)
+        bar = f"{prcnt}%|{'█' * prcnt}{' ' * (100 - prcnt)}| {idx + 1}/{total}"
+        print(f"\r{bar}", end="")
         yield item
