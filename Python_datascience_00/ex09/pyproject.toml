@@ -1,27 +1,21 @@
+# Choosing a build backend
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["hatchling"]          # the build backend to use, package to build the package
+build-backend = "hatchling.build" # python module to use to build the package/project
 
+# Project metadata
 [project]
 name = "ft_package"
 version = "0.0.1"
 description = "A sample test package"
 authors = [
-  { name="bebigel", email="bebigel@42.fr" },
+  { name="bebigel" },
+  { email="bebigel@42.fr" },
 ]
-license = "MIT"
+license = { text = "MIT" }
 readme = "README.md"
 requires-python = ">=3.0"
-classifiers = [
-    # How mature is this project? Common values are
-    #   3 - Alpha
-    #   4 - Beta
-    #   5 - Production/Stable
-    "Development Status :: 4 - Beta",
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-]
+classifiers = []
 
 [project.urls]
 Homepage = "https://github.com/bebigel/ft_package"
