@@ -14,7 +14,7 @@ authors = [
 ]
 license = { text = "MIT" }
 readme = "README.md"
-requires-python = ">=3.0"
+requires-python = ">=3.10"
 classifiers = []
 
 [project.urls]

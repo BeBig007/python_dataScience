@@ -5,8 +5,8 @@ create your first package
 <!-- project test
 pip list | grep '^f'
 
-python -m pip install --upgrade build   # install the build package
-python -m build                         # build the package
+python3 -m pip install --upgrade build   # install the build package
+python3 -m build                         # build the package
 
 pip install ./dist/ft_package-0.0.1.tar.gz
 pip install ./dist/ft_package-0.0.1-py3-none-any.whl
