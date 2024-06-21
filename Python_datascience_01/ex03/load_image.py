@@ -22,8 +22,11 @@ def ft_load(path: str) -> numpy.ndarray:
 
     except AssertionError as msg:
         print(f"AssertionError: {msg}")
+
     except FileNotFoundError:
         print(f"FileNotFoundError: The file at path '{path}' does not exist")
+
     except Exception as e:
         print(f"Error: {e}")
+
     return None

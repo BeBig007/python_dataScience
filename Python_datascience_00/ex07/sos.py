@@ -60,9 +60,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# $> python sos.py "sos" | cat -e
-# ... --- ...$
-# $> python sos.py 'h$llo'
-# AssertionError: the arguments are bad
-# $>

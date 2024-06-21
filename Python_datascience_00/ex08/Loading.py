@@ -1,5 +1,5 @@
 
-def ft_tqdm(lst: range) -> None: # type: ignore
+def ft_tqdm(lst: range) -> None:  # type: ignore
     """function to display a progress bar
 
     Args:

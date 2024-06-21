@@ -1,16 +1,20 @@
-ft_list = ["Hello", "tata!"]
-ft_tuple = ("Hello", "toto!")
-ft_set = {"Hello", "tutu!"}
-ft_dict = {"Hello": "titi!"}
 
-ft_list = ["Hello", "World!"]
-ft_tuple = ("Hello", "France!")
-ft_set = {"Hello", "Paris!"}
-ft_dict = {"Hello": "42Paris!"}
+def main():
+    ft_list = ["Hello", "tata!"]
+    ft_tuple = ("Hello", "toto!")
+    ft_set = {"Hello", "tutu!"}
+    ft_dict = {"Hello": "titi!"}
 
-print(ft_list)
-print(ft_tuple)
-print(ft_set)
-print(ft_dict)
+    ft_list = ["Hello", "World!"]
+    ft_tuple = ("Hello", "France!")
+    ft_set = {"Hello", "Paris!"}
+    ft_dict = {"Hello": "42Paris!"}
 
-# python Hello.py | cat -e
+    print(ft_list)
+    print(ft_tuple)
+    print(ft_set)
+    print(ft_dict)
+
+
+if __name__ == "__main__":
+    main()

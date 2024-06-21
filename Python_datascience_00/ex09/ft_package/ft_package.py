@@ -1,3 +1,3 @@
 
-def count_in_list(l, e):
-    return l.count(e)
+def count_in_list(lst, e):
+    return lst.count(e)

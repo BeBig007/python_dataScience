@@ -1,5 +1,4 @@
 import numpy
-from PIL import Image
 from matplotlib import pyplot
 from load_image import ft_load, ft_zoom
 
@@ -14,9 +13,11 @@ def ft_rotate(img_arr: numpy.ndarray) -> numpy.ndarray:
         numpy.ndarray: Rotated image as a numpy array.
     """
     try:
-        assert isinstance(img_arr, numpy.ndarray), "Input must be a numpy array"
+        assert isinstance(img_arr, numpy.ndarray), \
+            "Input must be a numpy array"
 
-        flipped_img_arr = numpy.rot90(img_arr)
+        img_arr_2d = img_arr[:, :, 0]
+        flipped_img_arr = numpy.rot90(img_arr_2d)
         print(f"New shape after Transpose: {flipped_img_arr.shape}")
 
         pyplot.imshow(flipped_img_arr, cmap='gray')
@@ -26,9 +27,12 @@ def ft_rotate(img_arr: numpy.ndarray) -> numpy.ndarray:
 
     except AssertionError as msg:
         print(f"AssertionError: {msg}")
+
     except Exception as e:
         print(f"Error: {e}")
+
     return None
+
 
 def main():
     img = ft_load("animal.jpeg")

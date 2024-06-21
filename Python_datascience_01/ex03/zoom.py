@@ -14,13 +14,14 @@ def ft_zoom(img_arr: numpy.ndarray) -> numpy.ndarray:
         np.ndarray: Zoomed and grayscale image as a numpy array.
     """
     try:
-        assert isinstance(img_arr, numpy.ndarray), "Input must be a numpy array"
+        assert isinstance(img_arr, numpy.ndarray), \
+            "Input must be a numpy array"
 
         img = Image.fromarray(img_arr)
         gray_img = img.crop((450, 100, 850, 500)).convert("L")
         gray_img_arr = numpy.array(gray_img)
+        gray_img_arr = gray_img_arr[:, :, numpy.newaxis]
         print(f"New shape after slicing: {gray_img_arr.shape}")
-        # print(gray_img_arr[0:len(gray_img_arr), 0:1])
 
         pyplot.imshow(gray_img_arr, cmap='gray')
         pyplot.show()
@@ -29,8 +30,10 @@ def ft_zoom(img_arr: numpy.ndarray) -> numpy.ndarray:
 
     except AssertionError as msg:
         print(f"AssertionError: {msg}")
+
     except Exception as e:
         print(f"Error: {e}")
+
     return None
 
 

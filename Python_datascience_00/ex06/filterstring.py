@@ -16,6 +16,7 @@ def main():
         words = arg1.split()
         filtered_words = list(ft_filter(lambda x: len(x) > nb, words))
         print(filtered_words)
+
     except AssertionError as msg:
         print(f"AssertionError: {msg}")
 
@@ -25,15 +26,3 @@ if __name__ == "__main__":
 
     # print(filter.__doc__)
     # print(ft_filter.__doc__)
-
-# $> python filterstring.py 'Hello the World' 4
-# ['Hello', 'World']
-# $>
-# $> python filterstring.py 'Hello the World' 99
-# []
-# $>
-# $> python filterstring.py 3 'Hello the World'
-# AssertionError: the arguments are bad
-# $>
-# $> python filterstring.py
-# AssertionError: the arguments are bad
