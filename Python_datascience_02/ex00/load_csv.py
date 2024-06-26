@@ -1,11 +1,22 @@
 import pandas as pd
 
-def load(path: str) -> Dataset: # (You have to adapt the type of return according to your library)
-    return None
 
-# $> python3 tester.py
-# Loading dataset of dimensions (195, 302)
-# country 1800 1801 1802 1803 ... 2096 2097 2098 2099 2100
-# Afghanistan 28.2 28.2 28.2 28.2 ... 76.2 76.4 76.5 76.6 76.8
-# ...
-# $>
+def load(path: str) -> pd.DataFrame:
+    """Load a dataset from a CSV file and print its content.
+
+    Args:
+        path (str): Path to the CSV file.
+
+    Returns:
+        pd.DataFrame: Dataset as a pandas DataFrame.
+    """
+    try:
+        assert isinstance(path, str), "the input must be string"
+        data = pd.read_csv(path)
+        print(f"Loading dataset of dimensions {data.shape}")
+        return data
+    except AssertionError as msg:
+        print(f"AssertionError: {msg}")
+    except Exception as e:
+        print(f"Error: {e}")
+    return None
