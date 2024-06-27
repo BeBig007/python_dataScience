@@ -3,10 +3,10 @@ import pandas as pd
 
 
 def aff_pop(df: pd.DataFrame):
-    """
+    """Plot the population projections for France and Belgium.
 
     Args:
-        array (pd.DataFrame):
+        array (pd.DataFrame): Dataset with population projections.
 
     Returns:
         None
@@ -14,7 +14,9 @@ def aff_pop(df: pd.DataFrame):
     try:
         assert isinstance(df, pd.DataFrame), "arg must be a dataframe"
 
-        pop_data = df.loc[(df['country'] == 'France') | (df['country'] == 'Belgium')]
+        pop_data = df.loc[
+            (df['country'] == 'France') | (df['country'] == 'Belgium')
+        ]
         assert not pop_data.empty, "no data found"
 
         pop_data = pop_data.drop(columns=['country']).T
@@ -23,7 +25,9 @@ def aff_pop(df: pd.DataFrame):
         pop_data = pop_data.loc[pop_data.index < 2050]
 
         for col in pop_data.columns:
-            pop_data[col] = pop_data[col].apply(lambda x: float(x.strip('M'))*1000000)
+            pop_data[col] = pop_data[col].apply(
+                lambda x: float(x.strip('M'))*1000000
+            )
 
         colors = ['blue', 'green']
         pop_data.plot.line(color=colors)

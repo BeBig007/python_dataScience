@@ -6,10 +6,10 @@ def main():
     c_reset = "\033[0m"
     c_shape = "\033[94m"  # Blue
 
-    print(f"{c_shape}---------------Load life_expectancy_years---------------{c_reset}")
-    income = load("../income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
+    print(f"{c_shape}---------------Load file--------------{c_reset}")
+    inc = load("../income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
     life_expectancy = load('../life_expectancy_years.csv')
-    projection_life(income, life_expectancy)
+    projection_life(inc, life_expectancy)
 
 
 if __name__ == "__main__":

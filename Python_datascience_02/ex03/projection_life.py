@@ -1,26 +1,29 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-import numpy as np
 
 
-def projection_life(income_df: pd.DataFrame, life_df:pd.DataFrame):
-    """ This function takes two dataframes as input and plots a scatter plot of
+def projection_life(income_df: pd.DataFrame, life_df: pd.DataFrame):
+    """This function takes two dataframes as input and plots a scatter plot of
 the life expectancy against the gross domestic product for the year 1900.
 
-    Args:
-        income_df (pd.DataFrame): Dataframe containing the gross domestic product per country.
-        life_df (pd.DataFrame): Dataframe containing the life expectancy per country.
+Args:
+    income_df (pd.DataFrame): Dataframe containing the GDP per country.
+    life_df (pd.DataFrame): Dataframe containing the life expectancy/country.
 
-    Returns:
+Returns:
         None
     """
     try:
-        assert isinstance(income_df, pd.DataFrame) and isinstance(life_df, pd.DataFrame), "arg must be a dataframe"
+        assert isinstance(income_df, pd.DataFrame), "arg must be a dataframe"
+        assert isinstance(life_df, pd.DataFrame), "arg must be a dataframe"
 
         income_1900 = income_df[['country', '1900']]
         life_1900 = life_df[['country', '1900']]
 
-        data = pd.merge(income_1900, life_1900, how='inner', on='country', suffixes=["_income", "_life"])
+        data = pd.merge(
+            income_1900, life_1900, how='inner', on='country',
+            suffixes=["_income", "_life"]
+        )
         data = data.dropna()
 
         for x in data.index:
@@ -37,5 +40,3 @@ the life expectancy against the gross domestic product for the year 1900.
     except AssertionError as msg:
         print(f"Assertion Error: {msg}")
     return None
-
-

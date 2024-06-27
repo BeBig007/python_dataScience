@@ -6,7 +6,7 @@ def aff_life(df: pd.DataFrame):
     """Display the life expectancy over the years for France.
 
     Args:
-        array (pd.DataFrame): The input dataframe containing life expectancy data.
+        array (pd.DataFrame): Dataframe containing life expectancy data.
 
     Returns:
         None

@@ -6,7 +6,7 @@ def main():
     c_reset = "\033[0m"
     c_shape = "\033[94m"  # Blue
 
-    print(f"{c_shape}---------------Load life_expectancy_years---------------{c_reset}")
+    print(f"{c_shape}---------------Load file---------------{c_reset}")
     data = load("../population_total.csv")
     aff_pop(data)
 

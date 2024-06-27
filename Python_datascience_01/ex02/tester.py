@@ -17,7 +17,7 @@ def main():
         ft_load(1)
     except ValueError as e:
         print(e)
-    
+
     print(f"{c_error}\n---------------Invalid input---------------{c_reset}")
     try:
         ft_load("land.png")
