@@ -28,7 +28,7 @@ class Stark(Character):
         Character (ABC): Abstract Base Class
     """
 
-    def __init__(self, first_name, is_alive = True):
+    def __init__(self, first_name, is_alive=True):
         """Constructor for Stark
         Args:
             first_name (str): first name of the Stark character

@@ -14,12 +14,15 @@ class Baratheon(Character):
             is_alive (bool, opt): Whether the character is alive Defaults: True
         """
         super().__init__(first_name, is_alive)
+        self.family_name = 'Baratheon'
+        self.eyes = 'brown'
+        self.hairs = 'dark'
 
     def __str__(self) -> str:
-        return super().__str__()
-    
+        return f"Vector: ('{self.family_name}', '{self.eyes}', '{self.hairs}')"
+
     def __repr__(self) -> str:
-        return super().__repr__()
+        return str(self)
 
     def die(self):
         """Sets the Baratheon's is_alive attribute to False"""
@@ -39,11 +42,20 @@ class Lannister(Character):
             is_alive (bool, opt): Whether the character is alive Defaults: True
         """
         super().__init__(first_name, is_alive)
+        self.family_name = 'Lannister'
+        self.eyes = 'blue'
+        self.hairs = 'light'
+
+    def __str__(self) -> str:
+        return f"Vector: ('{self.family_name}', '{self.eyes}', '{self.hairs}')"
+
+    def __repr__(self) -> str:
+        return str(self)
 
     def die(self):
         """Sets the Lannister's is_alive attribute to False"""
         self.is_alive = False
 
-    # decorator
-    def create_lannister():
-        print()
+    @classmethod
+    def create_lannister(cls, first_name, is_alive=True):
+        return cls(first_name, is_alive)

@@ -1,56 +1,37 @@
 from S1E7 import Baratheon, Lannister
 
-    # Ned = Stark("Ned")
-    # print(Ned.__dict__)
-    # print(Ned.is_alive)
-    # Ned.die()
-    # print(Ned.is_alive)
-    # print(Ned.__doc__)
-    # print(Ned.__init__.__doc__)
-    # print(Ned.die.__doc__)
-    # print("---")
-    # Lyanna = Stark("Lyanna", False)
-    # print(Lyanna.__dict__)
-    # try:
-    #     hodor = Character("hodor")
-    # except TypeError as e:
-    #     print(e)
 
 def main():
+    c_reset = "\033[0m"
+    c_shape = "\033[94m"    # Blue
+    c_dict = "\033[93m"     # Yellow
+    c_str = "\033[92m"      # Green
+    c_repr = "\033[91m"     # Red
+    c_alive = "\033[95m"    # Purple
+    c_doc = "\033[96m"      # Cyan
+
+    print(f"{c_shape}---------------Robert---------------{c_reset}")
     Robert = Baratheon("Robert")
-    print(Robert.__dict__)
-    print(Robert.__str__)
-    print(Robert.__repr__)
-    print(Robert.is_alive)
+    print(f"{c_dict}{Robert.__dict__}{c_reset}")
+    print(f"{c_str}{Robert.__str__}{c_reset}")
+    print(f"{c_repr}{Robert.__repr__}{c_reset}")
+    print(f"{c_alive}{Robert.is_alive}{c_reset}")
     Robert.die()
-    print(Robert.is_alive)
-    print(Robert.__doc__)
+    print(f"{c_alive}{Robert.is_alive}{c_reset}")
+    print(f"{c_doc}{Robert.__doc__}{c_reset}")
     print("---")
 
+    print(f"{c_shape}---------------Cersei---------------{c_reset}")
     Cersei = Lannister("Cersei")
-    print(Cersei.__dict__)
-    print(Cersei.__str__)
-    print(Cersei.is_alive)
+    print(f"{c_dict}{Cersei.__dict__}{c_reset}")
+    print(f"{c_str}{Cersei.__str__}{c_reset}")
+    print(f"{c_alive}{Cersei.is_alive}{c_reset}")
     print("---")
 
     Jaine = Lannister.create_lannister("Jaine", True)
-    print(f"Name : {Jaine.first_name, type(Jaine).__name__}, Alive : {Jaine.is_alive}")
+    print(f"Name : {Jaine.first_name, type(Jaine).__name__}, "
+          f"Alive : {Jaine.is_alive}")
 
 
 if __name__ == "__main__":
     main()
-
-# $> python tester.py
-# {'first_name': 'Robert', 'is_alive': True, 'family_name': 'Baratheon', 'eyes': 'brown', 'hairs': 'dark'}
-# <bound method Baratheon.__str__ of Vector: ('Baratheon', 'brown', 'dark')>
-# <bound method Baratheon.__repr__ of Vector: ('Baratheon', 'brown', 'dark')>
-# True
-# False
-# Representing the Baratheon family.
-# ---
-# {'first_name': 'Cersei', 'is_alive': True, 'family_name': 'Lannister', 'eyes': 'blue', 'hairs': 'light'}
-# <bound method Lannister.__str__ of Vector: ('Lannister', 'blue', 'light')>
-# True
-# ---
-# Name : ('Jaine', 'Lannister'), Alive : True
-# $>
