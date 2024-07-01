@@ -2,38 +2,40 @@ from S1E7 import Baratheon, Lannister
 
 
 class King(Baratheon, Lannister):
-    """
-    Args:
-        Baratheon ( ):
-        Lannister ( ):
-    """
+    """King class inherits from Baratheon and Lannister"""
 
-    def __init__(self, first_name, is_alive=True, eyes='blue', hairs='pink'):
-        """_summary_
-        Args:
-            first_name ( ):
-            is_alive (bool, optional): . Defaults to True.
-        """
+    def __init__(self, first_name, is_alive=True):
+        """Constructor for King"""
         super().__init__(first_name, is_alive)
-        self.eyes = eyes
-        self.hairs = hairs
 
-    @property
-    def eyes(self):
-        print("eyes Getting value...")
-        return self._eyes
+    def set_eyes(self, new_eyes):
+        """Sets the eyes attribute to new_eyes"""
+        self.eyes = new_eyes
 
-    @eyes.setter
-    def eyes(self, color):
-        print("eyes Setting value...")
-        self._eyes = color
+    def set_hairs(self, new_hairs):
+        """Sets the hairs attribute to new_hairs"""
+        self.hairs = new_hairs
 
-    @property
-    def hairs(self):
-        print("hairs Getting value...")
-        return self._hairs
+    def get_eyes(self):
+        """Returns the eyes attribute"""
+        return self.eyes
 
-    @hairs.setter
-    def hairs(self, color):
-        print("hairs Setting value...")
-        self._hairs = color
+    def get_hairs(self):
+        """Returns the hairs attribute"""
+        return self.hairs
+
+    # @property
+    # def eyes(self):
+    #     return self.eyes
+
+    # @eyes.setter
+    # def eyes(self, new_eyes):
+    #     self._eyes = new_eyes
+
+    # @property
+    # def hairs(self):
+    #     return self.hairs
+
+    # @hairs.setter
+    # def hairs(self, new_hairs):
+    #     self._hairs = new_hairs

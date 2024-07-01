@@ -1,4 +1,5 @@
-from S1E9 import Character, Stark
+from S1E9 import Stark
+# from S1E9 import Character
 
 
 def main():
@@ -17,10 +18,10 @@ def main():
     print("---")
     Lyanna = Stark("Lyanna", False)
     print(Lyanna.__dict__)
-    try:
-        hodor = Character("hodor")
-    except TypeError as e:
-        print(e)
+    # try:
+    #     hodor = Character("hodor")
+    # except TypeError as e:
+    #     print(e)
 
 
 if __name__ == "__main__":

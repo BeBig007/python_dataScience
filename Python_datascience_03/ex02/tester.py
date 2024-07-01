@@ -13,12 +13,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# $> python tester.py
-# {'first_name': 'Joffrey', 'is_alive': True, 'family_name': 'Baratheon',
-#  'eyes': 'brown', 'hair': 'dark'}
-# blue
-# light
-# {'first_name': 'Joffrey', 'is_alive': True, 'family_name': 'Baratheon',
-#  'eyes': 'blue', 'hairs': 'light'}
-# $>
