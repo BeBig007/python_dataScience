@@ -13,6 +13,8 @@ pip install ./dist/ft_package-0.0.1-py3-none-any.whl
 
 pip show -v ft_package
 
+python3 main.py
+
 pip uninstall ft_package
 rm -rf dist/ build/ ft_package.egg-info/
 -->
