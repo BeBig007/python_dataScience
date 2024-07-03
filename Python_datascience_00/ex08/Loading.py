@@ -1,10 +1,6 @@
 
 def ft_tqdm(lst: range) -> None:  # type: ignore
-    """function to display a progress bar
-
-    Args:
-        lst (range): range of numbers
-    """
+    """Function to display a progress bar"""
     total = len(lst)
 
     for idx, item in enumerate(lst):

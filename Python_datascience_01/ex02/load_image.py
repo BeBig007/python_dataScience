@@ -3,14 +3,8 @@ from PIL import Image
 
 
 def ft_load(path: str) -> numpy.ndarray:
-    """Load an image from a file.
+    """Load an image from a file."""
 
-    Args:
-        path (str): Path to the image file.
-
-    Returns:
-        numpy.ndarray: Image as a numpy array.
-    """
     try:
         assert isinstance(path, str), "The input must be string"
 

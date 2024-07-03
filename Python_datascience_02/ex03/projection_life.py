@@ -4,15 +4,8 @@ import pandas as pd
 
 def projection_life(income_df: pd.DataFrame, life_df: pd.DataFrame):
     """This function takes two dataframes as input and plots a scatter plot of
-the life expectancy against the gross domestic product for the year 1900.
+the life expectancy against the gross domestic product for the year 1900."""
 
-Args:
-    income_df (pd.DataFrame): Dataframe containing the GDP per country.
-    life_df (pd.DataFrame): Dataframe containing the life expectancy/country.
-
-Returns:
-        None
-    """
     try:
         assert isinstance(income_df, pd.DataFrame), "arg must be a dataframe"
         assert isinstance(life_df, pd.DataFrame), "arg must be a dataframe"

@@ -4,14 +4,8 @@ from load_image import ft_load, ft_zoom
 
 
 def ft_rotate(img_arr: numpy.ndarray) -> numpy.ndarray:
-    """Rotate the image 90 degrees.
+    """Rotate the image 90 degrees."""
 
-    Args:
-        img_arr (numpy.ndarray): Image as a numpy array.
-
-    Returns:
-        numpy.ndarray: Rotated image as a numpy array.
-    """
     try:
         assert isinstance(img_arr, numpy.ndarray), \
             "Input must be a numpy array"

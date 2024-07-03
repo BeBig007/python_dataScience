@@ -9,16 +9,15 @@ def generate_id() -> str:
 
 @dataclass
 class Student:
-    """ """
+    """Student class with name, surname, active, login and id attributes.
+    The login is the first letter of the name and the surname.
+    The id is a random string of 15 lowercase letters."""
     name: str
     surname: str
-    active: bool
-    # login: str
-    # id: str
+    active: bool = True
+    login: str = field(init=False)
+    id: str = field(init=False, default_factory=generate_id)
 
-    def __init__(self, name, surname, active=True):
-        """ """
-        self.name = name
-        self.surname = surname
-        self.active = active
-        print(self)
+    def __post_init__(self):
+        """Set the login attribute."""
+        self.login = self.name[0] + self.surname

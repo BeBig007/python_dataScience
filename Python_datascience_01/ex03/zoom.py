@@ -5,14 +5,8 @@ from load_image import ft_load
 
 
 def ft_zoom(img_arr: numpy.ndarray) -> numpy.ndarray:
-    """Zoom in on a section of the image and convert to grayscale.
+    """Zoom in on a section of the image and convert to grayscale."""
 
-    Args:
-        img_arr (np.ndarray): Image as a numpy array.
-
-    Returns:
-        np.ndarray: Zoomed and grayscale image as a numpy array.
-    """
     try:
         assert isinstance(img_arr, numpy.ndarray), \
             "Input must be a numpy array"

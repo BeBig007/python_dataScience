@@ -3,14 +3,8 @@ import pandas as pd
 
 
 def aff_life(df: pd.DataFrame):
-    """Display the life expectancy over the years for France.
+    """Display the life expectancy over the years for France."""
 
-    Args:
-        array (pd.DataFrame): Dataframe containing life expectancy data.
-
-    Returns:
-        None
-    """
     try:
         assert isinstance(df, pd.DataFrame), "arg must be a dataframe"
 
@@ -34,4 +28,5 @@ def aff_life(df: pd.DataFrame):
 
     except AssertionError as msg:
         print(f"Assertion Error: {msg}")
+
     return None

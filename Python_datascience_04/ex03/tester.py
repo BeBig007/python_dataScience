@@ -17,15 +17,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# Expected output: (id is random)
-# $> python tester.py
-# Student(name='Edward', surname='agle', active=True, login='Eagle',
-#         id='trannxhndgtolvh')
-# $>
-
-# The login and id should not be initializable and must return an error.
-# $> python tester.py
-# ...
-# TypeError: Student.__init__() got an unexpected keyword argument 'id'
-# $>

@@ -54,6 +54,7 @@ def main():
             if NESTED_MORSE.get(c) is not None:
                 word_in_morse += NESTED_MORSE.get(c)
         print(f"{word_in_morse.strip()}")
+
     except AssertionError as msg:
         print(f"AssertionError: {msg}")
 

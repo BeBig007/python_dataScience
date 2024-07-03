@@ -3,14 +3,8 @@ import pandas as pd
 
 
 def aff_pop(df: pd.DataFrame):
-    """Plot the population projections for France and Belgium.
+    """Plot the population projections for France and Belgium."""
 
-    Args:
-        array (pd.DataFrame): Dataset with population projections.
-
-    Returns:
-        None
-    """
     try:
         assert isinstance(df, pd.DataFrame), "arg must be a dataframe"
 
@@ -46,4 +40,5 @@ def aff_pop(df: pd.DataFrame):
 
     except AssertionError as msg:
         print(f"Assertion Error: {msg}")
+
     return None

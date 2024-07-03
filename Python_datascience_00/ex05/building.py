@@ -3,12 +3,8 @@ import sys
 
 
 def ispunctuation(c: str) -> bool:
-    """This function checks if the character is a punctuation mark.
-    Args:
-        c (str): The character to check.
-    Returns:
-        bool: True if the character is a punctuation mark, False otherwise.
-    """
+    """This function checks if the character is a punctuation mark."""
+
     value = '''!"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~'''
     return c in value
 
