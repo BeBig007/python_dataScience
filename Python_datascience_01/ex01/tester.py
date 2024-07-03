@@ -35,6 +35,14 @@ def main():
     except ValueError as e:
         print(e)
 
+    print(f"{color_error}\n------------Invalid input------------{color_reset}")
+    try:
+        slice_me(
+            [[1.8, 78.4], [2.15, 102.7], [2.10, 98.5], [1.88, 75.2]], 0, 2.5
+        )
+    except ValueError as e:
+        print(e)
+
 
 if __name__ == "__main__":
     main()
