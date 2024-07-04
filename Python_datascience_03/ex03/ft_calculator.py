@@ -26,7 +26,3 @@ class calculator:
             raise ValueError("Cannot divide by 0")
         self.val = [x / object for x in self.val]
         print(self.val)
-
-    def __repr__(self):
-        """Returns a string representation of the Calculator object."""
-        return f"Calculator({self.val})"

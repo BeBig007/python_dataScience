@@ -13,21 +13,28 @@ def main():
     print(f"{c_shape}---------------Robert---------------{c_reset}")
     Robert = Baratheon("Robert")
     print(f"{c_dict}{Robert.__dict__}{c_reset}")
+    print("---")
+
     print(f"{c_str}{Robert.__str__}{c_reset}")
     print(f"{c_repr}{Robert.__repr__}{c_reset}")
+    print("---")
+
     print(f"{c_alive}{Robert.is_alive}{c_reset}")
     Robert.die()
     print(f"{c_alive}{Robert.is_alive}{c_reset}")
-    print(f"{c_doc}{Robert.__doc__}{c_reset}")
     print("---")
+
+    print(f"{c_doc}{Robert.__doc__}{c_reset}")
 
     print(f"{c_shape}---------------Cersei---------------{c_reset}")
     Cersei = Lannister("Cersei")
     print(f"{c_dict}{Cersei.__dict__}{c_reset}")
     print(f"{c_str}{Cersei.__str__}{c_reset}")
-    print(f"{c_alive}{Cersei.is_alive}{c_reset}")
     print("---")
 
+    print(f"{c_alive}{Cersei.is_alive}{c_reset}")
+
+    print(f"{c_shape}---------------Jaine---------------{c_reset}")
     Jaine = Lannister.create_lannister("Jaine", True)
     print(f"Name : {Jaine.first_name, type(Jaine).__name__}, "
           f"Alive : {Jaine.is_alive}")
